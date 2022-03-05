@@ -5,7 +5,7 @@ Social network of bloggers
 ### Описание 
 Благодаря этому проекту можно будет угощать мороженым друзей из разных городов.
 ### Технологии
-Python 3.7
+Python 3.7g
 
 Django 2.2.19
 ### Запуск проекта в dev-режиме
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ``` 
 - В папке с файлом manage.py выполните команду:
 ```
-python3 manage.py runserver
+pythondjango-admin version manage.py runserver
 ```
 ### Авторы
 Александр
