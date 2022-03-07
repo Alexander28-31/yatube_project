@@ -3,20 +3,15 @@
 {% block title %}
 <title>{{ title}}</title>
 {%endblock%}
-<!DOCTYPE html> <!-- Используется html 5 версии -->
-<html lang="ru"> <!-- Язык сайта - русский -->
-  <head>    
-   
-  </head>
- 
-  {% block content %}
+
+{% block content %}
       <!-- класс py-5 создает отступы сверху и снизу блока -->
-      <div class="container py-5">
-        <h1>Лев Толстой – зеркало русской революции.</h1>
-        <p>
-          Группа тайных поклонников графа.
-        </p>
-<article>
+<div class="container py-5">
+    <h1>Лев Толстой – зеркало русской революции.</h1>
+    <p>
+      Группа тайных поклонников графа.
+    </p>
+
 {% for post in posts %}
 <ul>
     <li>
@@ -26,10 +21,9 @@
       Дата публикации: {{ post.pub_date|date:"d E Y" }}
     </li>
     </ul>
-<p>{{ post.text }}</p>    
-<a href="{%static 'posts:group_list.html'%}">все записи группы</a>
+<p>{{ post.text }}</p> 
+<a href="{% url 'posts:idex' %}">все записи группы</a>
 {% if not forloop.last %}<hr>{% endif %}
-</article>
 {% endfor %} 
         
         <!-- под последним постом нет линии -->
