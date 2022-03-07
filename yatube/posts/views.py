@@ -12,7 +12,7 @@ def index(request):
         'title': title,
     }
     return render(request, 'posts/index.html', context) 
-    
+
 def group_posts(request, slug):
     title = "Здесь будет информация о группах проекта Yatube"
     group = get_object_or_404(Group, slug=slug)
